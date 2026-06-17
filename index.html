@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+<h1>💰 Expense Tracker</h1>
+
+<div class="controls">
+<input type="text" id="search" placeholder="Search Transaction">
+
+<select id="filterCategory">
+<option value="all">All Categories</option>
+<option>🍔 Food</option>
+<option>✈️ Travel</option>
+<option>🛍️ Shopping</option>
+<option>💼 Salary</option>
+<option>🎬 Entertainment</option>
+<option>📦 Other</option>
+</select>
+
+<button id="exportCSV">Export CSV</button>
+<button id="darkMode">🌙 Dark Mode</button>
+</div>
+
+<div class="summary">
+
+<div class="card balance">
+<h3>Balance</h3>
+<p id="balance">₹0</p>
+</div>
+
+<div class="card income">
+<h3>Total Income</h3>
+<p id="income">₹0</p>
+</div>
+
+<div class="card expense">
+<h3>Total Expense</h3>
+<p id="expense">₹0</p>
+</div>
+
+<div class="card monthly">
+<h3>This Month</h3>
+<p id="monthly">₹0</p>
+</div>
+
+</div>
+
+<form id="form">
+
+<input type="text" id="label" placeholder="Label" required>
+
+<input type="number" id="amount" placeholder="Amount" required>
+
+<input type="date" id="date" required>
+
+<select id="type">
+<option value="income">Income</option>
+<option value="expense">Expense</option>
+</select>
+
+<select id="category">
+<option>Food</option>
+<option>Travel</option>
+<option>Shopping</option>
+<option>Salary</option>
+<option>Entertainment</option>
+<option>Other</option>
+</select>
+
+<button type="submit">Save Transaction</button>
+
+</form>
+
+<div class="chart-container">
+<canvas id="chart"></canvas>
+</div>
+
+<div class="list">
+<div id="empty">No Transactions Yet</div>
+<ul id="transactionList"></ul>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
