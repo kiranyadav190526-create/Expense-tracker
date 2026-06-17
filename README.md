@@ -1,4 +1,4 @@
-# 💰 Expense Tracker Pro
+# 💰 Expense Tracker 
 
 A modern and responsive Expense Tracker built with HTML, CSS, and JavaScript to help users manage their personal finances efficiently.
 
